@@ -8,3 +8,6 @@
 
 7- PS D:\raed\Workshop\Laravel\SiteOne\siteOne-app> php artisan make:controller StaticController ***Create Controller***
 8- PS D:\raed\Workshop\Laravel\SiteOne\siteOne-app> php artisan make:controller ComputersController --resource
+
+9- PS D:\raed\Workshop\Laravel\SiteOne\siteOne-app> php artisan make:model Computer --migration  
+10- PS D:\raed\Workshop\Laravel\SiteOne\siteOne-app> php artisan migrate

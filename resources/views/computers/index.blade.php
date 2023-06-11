@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title','About')
+@section('title','Show Computer')
 @section('content')
 <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
     <div class="flex justify-center pt-8">
@@ -12,7 +12,7 @@
             <ul>
                 @foreach ($computers as $item)
                 <a href="{{ route('computers.show', ['computer' => $item['id']]) }}"> 
-                    <li>{{$item['name']}} is from <strong>{{$item['origin']}}</strong></li>
+                    <li>{{$item['name']}} is from <strong>{{$item['origin']}}</strong> {{$item['price']}}$</li>
                 </a>
                 @endforeach
             </ul>  

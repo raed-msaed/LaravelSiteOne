@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Computer;
 class ComputersController extends Controller
 {
     // Array of static data
-    private static function getData(){
+   /* private static function getData(){
         return[
             ['id'=> 1, 'name'=> 'LG', 'origin'=> 'Koria'],
             ['id'=> 2, 'name'=> 'HP', 'origin'=> 'USA'],
             ['id'=> 3, 'name'=> 'Siemens', 'origin'=> 'Germany'],
         ];
-    }
+    }*/
     
     
     /**
@@ -22,7 +22,7 @@ class ComputersController extends Controller
     public function index()
     {
         return view('computers.index',[
-            'computers' => self::getData()
+            'computers' => Computer::all()
         ] );
     }
 
@@ -31,7 +31,7 @@ class ComputersController extends Controller
      */
     public function create()
     {
-        //
+        return view('computers.create');
     }
 
     /**
@@ -39,20 +39,32 @@ class ComputersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $computer = new Computer();
+        $computer->name = $request->input('computer-name');
+        $computer->origin = $request->input('computer-origin');
+        $computer->price = $request->input('computer-price');
+        $computer->save();
+        return redirect()->route('computers.index');
+
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(String $id)
+    public function show(String $computer)
     {
-        $computers = self::getData();
+       // $computers = self::getData();
 
-        $index = array_search($id, array_column($computers, 'id'));
+       // $index = array_search($computer, array_column($computers, 'id'));
+
+        $index = Computer::findOrFail($computer);
+
+        if($index === false){
+            abort(404);
+        }
 
         return view('computers.show', [
-            'computer' => $computers[$index]
+            'computer' => $index
         ]);
 
     }
