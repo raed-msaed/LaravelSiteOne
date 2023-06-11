@@ -1,18 +1,38 @@
 <?php
 
+use App\Http\Controllers\ComputersController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StaticController;
+
+
+Route::get('/', [StaticController::class, 'index'])->name('home.index');
+
+Route::get('/about',[StaticController::class, 'about'])->name('home.about');
+
+Route::get('/contact',[StaticController::class, 'contact'])->name('home.contact');
+
+Route::resource('computers', ComputersController::class);
+
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
+Route::get('/store/{category?}/{item?}', function($category=null, $item=null){
+    if(isset($category)){
+        if(isset($item)){
+        return "<h1>{$item}</h1>";
+        }
+        return "<h1>{$category}</h1>";
+    }
+    return '<h1>Store</h1>';
+
+});
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*
+Route::get('/store', function(){
+    $filter = request('style');
+    if(isset ($filter)){
+        return '<h2>Type of Style is </h2><span>'.strip_tags($filter).'</span>';   
+    }  
+    return '<h2>Type of Style </h2>';
 });
+*/

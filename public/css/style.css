@@ -1,0 +1,14 @@
+
+body {
+font-family: 'Nunito', sans-serif;
+}
+nav a {
+padding: .5rem;
+}
+li:hover {
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+}

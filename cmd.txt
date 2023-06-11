@@ -4,3 +4,7 @@
 4- PS D:\raed\Workshop\Laravel\SiteOne> laravel new siteOne-app
 5- PS D:\raed\Workshop\Laravel\SiteOne> cd .\siteOne-app 
 6- PS D:\raed\Workshop\Laravel\SiteOne\siteOne-app> php artisan serve
+
+
+7- PS D:\raed\Workshop\Laravel\SiteOne\siteOne-app> php artisan make:controller StaticController ***Create Controller***
+8- PS D:\raed\Workshop\Laravel\SiteOne\siteOne-app> php artisan make:controller ComputersController --resource
