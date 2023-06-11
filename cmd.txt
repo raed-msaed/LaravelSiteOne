@@ -1,0 +1,6 @@
+1- install Xampp
+2- install Composer
+3- PS D:\raed\Workshop\Laravel\SiteOne> composer global require laravel/installer
+4- PS D:\raed\Workshop\Laravel\SiteOne> laravel new siteOne-app
+5- PS D:\raed\Workshop\Laravel\SiteOne> cd .\siteOne-app 
+6- PS D:\raed\Workshop\Laravel\SiteOne\siteOne-app> php artisan serve
