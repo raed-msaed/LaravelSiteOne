@@ -11,3 +11,61 @@
 
 9- PS D:\raed\Workshop\Laravel\SiteOne\siteOne-app> php artisan make:model Computer --migration  
 10- PS D:\raed\Workshop\Laravel\SiteOne\siteOne-app> php artisan migrate
+
+/***************how clone Laravel from Github******************************/
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL/AllProject/LaravelSiteOne-master (master)
+$ npm install
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL/AllProject/LaravelSiteOne-master (master)
+$ cd ..
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL/AllProject (master)
+$ cd ..
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL (master)
+$ cd
+.git/       app.js      style.css   xampp/
+AllProject/ index.html  tools/
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL (master)
+$ cd xampp/
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL/xampp (master)
+$ cd htdocs/
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL/xampp/htdocs (master)
+$ git clone https://github.com/raed-msaed/LaravelSiteOne.git
+
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL/xampp/htdocs (master)
+$ git clone --branch master https://github.com/raed-msaed/LaravelSiteOne.git
+
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL/xampp/htdocs (master)
+$ ls
+LaravelSiteOne/    bitnami.css  favicon.ico  index.php   xampp/
+applications.html  dashboard/   img/         webalizer/
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL/xampp/htdocs (master)
+$ cd LaravelSiteOne/
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL/xampp/htdocs/LaravelSiteOne (master)
+$ cp .env.example .env
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL/xampp/htdocs/LaravelSiteOne (master)
+$ composer install
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL/xampp/htdocs/LaravelSiteOne (master)
+$ php artisan key:generate
+
+   INFO  Application key set successfully.
+
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL/xampp/htdocs/LaravelSiteOne (master)
+$ php artisan migrate:fresh --seed
+
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/DEV_LARAVEL/xampp/htdocs/LaravelSiteOne (master)
+$ php artisan serve
+
+
