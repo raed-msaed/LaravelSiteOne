@@ -10,10 +10,10 @@ li:hover {
     text-decoration: underline;
 }
 
-li {
+/* li {
     list-style: none;
     background: #f74747;
-}
+} */
 
 form {
     background: white;
