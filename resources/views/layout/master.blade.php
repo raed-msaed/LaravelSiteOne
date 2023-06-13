@@ -7,7 +7,7 @@
 
     <title>@yield('title', 'Unkown Page')</title>
 
-    <link rel="stylesheet" href="{{ url('css/style.css') }}">
+    <link rel="stylesheet" href="{{ url('css/style.css') }}"> {{-- {{asset('css/style.css')}} --}}
     <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
 
 </head>

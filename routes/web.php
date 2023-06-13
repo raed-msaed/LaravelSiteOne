@@ -7,21 +7,21 @@ use App\Http\Controllers\StaticController;
 
 Route::get('/', [StaticController::class, 'index'])->name('home.index');
 
-Route::get('/about',[StaticController::class, 'about'])->name('home.about');
+Route::get('about',[StaticController::class, 'about'])->name('home.about');
 
-Route::get('/contact',[StaticController::class, 'contact'])->name('home.contact');
+Route::get('contact',[StaticController::class, 'contact'])->name('home.contact');
 
 Route::resource('computers', ComputersController::class);
 
-Route::view('help-me', 'help')->name('home.help');
+Route::view('help-me', 'pages.help')->name('home.help');
 
-Route::view('ViewPassParam', 'viewpassparam', [
+Route::view('ViewPassParam', 'pages.viewpassparam', [
     'NameDocument' => 'view pass Param',
     'DescriptionDocument' => 'Document exemple view pass Param',
     'script' => '<script>This is Description</script>',
 ])->name('home.viewpassparam');
 
-Route::view('Master', 'master')->name('home.master');
+Route::view('Master', 'pages.master')->name('home.master');
 
 /*
 Route::get('/store/{category?}/{item?}', function($category=null, $item=null){
